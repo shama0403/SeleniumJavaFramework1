@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<!-- THIS IS FOR PACKAGE SELECTION TYPE PACKAGE SO WE CAN DEFINE WHICH ALL PACKAGES TO BE INCLUDED FOR THE LISTNER. ALL CLASSES IN GIVEN PACKAGE WILL BE INCLUDED -->
+ <!-- add listener class in tag -->
+ <listeners>
+<listener class-name="listeners.TestNgListners"></listener>
+</listeners>
+ <!-- all the classes inside package will be executed -->
+  <test thread-count="5" name="Test">
+    <packages>
+      <package name="listeners"/>
+    </packages>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+  <test name="Test1">
+  <!-- create group tag, run and include or exclude groups/test suites -->
+  <!-- The specific test class having this tag will be executed -->
+  <groups>
+  <define name="Regression1">
+  <include name="smoke"></include>
+  <include name="regression"></include>
+  </define>
+  <run>
+<include name="Regression1"></include>
+<!--  TO include class and all tests in the class -->
+<!-- <include name="AllClassGroup"></include> -->
+  </run>
+  </groups>
+    <classes>
+      <class name="Pck1.TestNgGroupsDemo"/>
+    </classes>
+  </test> <!-- Test1 -->
+</suite> <!-- Suite1 -->

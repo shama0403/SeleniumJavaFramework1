@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<!-- THIS IS FOR CLASS SELECTIN TYPE CLASS SO WE CAN DEFINE WHICH ALL CLASS TO BE INCLUDED FOR THE LISTNER  -->
+<!-- listners tag - control space bar, then inside that listener tag ctrl+space willg ive with pacikagename.classname -->
+<!-- here we have to give class name of the listeners i.e listner class -->
+<listeners>
+<listener class-name="listeners.TestNgListners"></listener>
+</listeners>
+
+  <test thread-count="5" name="Test">
+    <classes>
+    <!-- here we have to include the calling class -->
+      <class name="listeners.TestNgListnerDemo"/>
+        <class name="listeners.TestNgListnerDemo3"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

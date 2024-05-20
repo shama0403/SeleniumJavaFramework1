@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--  WE can pass parameters at suite level also and at test level also -->
+<suite name="Suite1">
+  <test name="Test1">
+  <!-- use parameter tag and name should be name of parameter used in parameter annotation inside the test class -->
+  <parameter name="testname1" value="abcdname"></parameter>
+  <classes>
+  <class name="Pck1.TestNgParametersDemo"> </class>
+  </classes>
+  </test> 
+</suite> 

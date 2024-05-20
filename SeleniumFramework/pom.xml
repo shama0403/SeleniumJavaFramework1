@@ -15,7 +15,17 @@
     <artifactId>junit-jupiter-api</artifactId>
     <version>5.11.0-M1</version>
     <scope>test</scope>
-</dependency><!-- https://mvnrepository.com/artifact/org.testng/testng -->
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
@@ -59,8 +69,35 @@
     <version>2.0.5</version>
 </dependency>
 
-
+<!-- https://mvnrepository.com/artifact/com.applitools/eyes-selenium-java3 -->
+<dependency>
+    <groupId>com.applitools</groupId>
+    <artifactId>eyes-selenium-java3</artifactId>
+    <version>5.0.0</version>
+</dependency>
   
 </dependencies>
+<build>
+	<plugins>
+         <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+			<includes>
+					<!-- class name to be included-->
+					<include>Test1.java</include>
+			</includes>
+			<!--- give test ng xml file path and name. If same framework folder only name.-->
+			<!-- as we have to change each time give reference variable and give file name in cmd-->
+			<!-- comment for including and excluding-->
+  <!--        <suiteXmlFiles>
+			             <suiteXmlFile>${testngfile}</suiteXmlFile>
+          </suiteXmlFiles>
+ -->       </configuration>
+      </plugin>
+   </plugins>
+</build>
+
 
 </project>
